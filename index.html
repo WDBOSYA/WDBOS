@@ -1,1 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- === SEO & META TAGS UTAMA === -->
+  <title>WDBOS : Portal Gaming & Turnamen Esports Terkini</title>
+  <meta name="title" content="WDBOS : Portal Gaming & Turnamen Esports Terkini">
+  <meta name="description" content="Dapatkan berita terbaru seputar dunia gaming, update patch, review game, dan jadwal turnamen esports terbesar hanya di portal berita WDBOS.">
+  <meta name="keywords" content="Berita game, WDBOS, esports indonesia, update gaming, turnamen esports, review game, wdbos gaming">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="WDBOS XDANAX">
+  <meta name="geo.region" content="ID">
+  <meta name="geo.placename" content="Indonesia">
 
+  <!-- === CANONICAL & LINKS === -->
+  <link rel="amphtml" href="https://wdbosya.github.io/WDBOS/amp.html">
+  <link rel="canonical" href="https://wdbosya.github.io/WDBOS/">
+  <link rel="alternate" href="https://wdbosya.github.io/WDBOS/" hreflang="id-ID">
+  <link rel="shortcut icon" href="https://wdbosya.github.io/WDBOS/favicon.png" type="image/x-icon">
+  <link rel="icon" type="image/png" href="https://wdbosya.github.io/WDBOS/favicon.png">
+  <link rel="apple-touch-icon" href="https://wdbosya.github.io/WDBOS/favicon.png">
+
+  <!-- === OPEN GRAPH & TWITTER === -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wdbosya.github.io/WDBOS/">
+  <meta property="og:site_name" content="WDBOS">
+  <meta property="og:title" content="WDBOS : Portal Gaming & Turnamen Esports Terkini">
+  <meta property="og:description" content="Dapatkan berita terbaru seputar dunia gaming, update patch, review game, dan jadwal turnamen esports terbesar hanya di portal berita WDBOS.">
+  <meta property="og:image" content="https://wdbosya.github.io/WDBOS/upss.jpg">
+  <meta property="og:locale" content="id_ID">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WDBOS : Portal Gaming & Turnamen Esports Terkini">
+  <meta name="twitter:description" content="Dapatkan berita terbaru seputar dunia gaming, update patch, review game, dan jadwal turnamen esports terbesar hanya di portal berita WDBOS.">
+  <meta name="twitter:image" content="https://wdbosya.github.io/WDBOS/upss.jpg">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #050508;
+      --bg-panel: #0d0d14;
+      --neon-cyan: #00f0ff;
+      --neon-purple: #bf00ff;
+      --neon-red: #ff003c;
+      --text-main: #e0e0e0;
+      --text-muted: #8b8b99;
+      --border-color: #2a2a35;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      background-image: 
+        linear-gradient(rgba(5, 5, 8, 0.95), rgba(5, 5, 8, 0.95)),
+        url('data:image/svg+xml;utf8,<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h40v40H0z" fill="none"/><circle cx="20" cy="20" r="1" fill="%23ffffff20"/></svg>'); 
+    }
+
+    h1, h2, h3, .gaming-font { font-family: 'Orbitron', sans-serif; text-transform: uppercase; }
+    .news-font { font-family: 'Rajdhani', sans-serif; text-transform: uppercase; font-weight: 700; }
+
+    /* NAVBAR */
+    .navbar {
+      background: rgba(5, 5, 8, 0.9);
+      border-bottom: 2px solid var(--neon-purple);
+      box-shadow: 0 0 20px rgba(191, 0, 255, 0.2);
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+    .brand-group { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+    .brand-group img { width: 45px; height: 45px; border-radius: 4px; box-shadow: 0 0 10px var(--neon-cyan); }
+    .brand-title { font-size: 2rem; font-weight: 900; color: var(--neon-cyan); letter-spacing: 2px; text-shadow: 0 0 10px var(--neon-cyan); }
+    .brand-subtitle { font-size: 0.8rem; color: #fff; background: var(--neon-red); padding: 2px 6px; border-radius: 2px; margin-left: 5px; font-family: 'Rajdhani', sans-serif; }
+    
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { color: var(--text-main); text-decoration: none; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; font-weight: 700; transition: 0.3s; }
+    .nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 8px var(--neon-cyan); }
+
+    .nav-actions { display: flex; gap: 10px; }
+    .btn { font-family: 'Orbitron', sans-serif; padding: 0.5rem 1.2rem; border-radius: 2px; font-weight: 700; text-decoration: none; font-size: 0.85rem; letter-spacing: 1px; transition: 0.3s; cursor: pointer; }
+    .btn-login { color: var(--neon-cyan); border: 1px solid var(--neon-cyan); background: rgba(0, 240, 255, 0.05); }
+    .btn-login:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 15px var(--neon-cyan); }
+    .btn-register { color: #fff; background: var(--neon-purple); border: 1px solid var(--neon-purple); box-shadow: 0 0 15px rgba(191, 0, 255, 0.4); clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%); }
+    .btn-register:hover { background: #d433ff; box-shadow: 0 0 25px var(--neon-purple); }
+
+    /* LAYOUT UTAMA */
+    .container { max-width: 1300px; margin: 2rem auto; padding: 0 5%; }
+    
+    /* BREADCRUMB */
+    .breadcrumb { font-family: 'Rajdhani', sans-serif; font-size: 1rem; color: var(--text-muted); margin-bottom: 1.5rem; font-weight: 600; }
+    .breadcrumb a { color: var(--neon-cyan); text-decoration: none; }
+    .breadcrumb span { margin: 0 10px; color: #555; }
+
+    /* GRID KONTEN (KIRI ARTIKEL, KANAN SIDEBAR) */
+    .content-wrapper { display: grid; grid-template-columns: 2.2fr 1fr; gap: 2.5rem; }
+    @media (max-width: 992px) { .content-wrapper { grid-template-columns: 1fr; } .nav-links { display: none; } }
+
+    /* AREA ARTIKEL (KIRI) */
+    .article-title { font-size: 2.5rem; color: #fff; text-shadow: 0 0 15px rgba(255, 255, 255, 0.2); line-height: 1.2; margin-bottom: 1rem; }
+    .article-meta { display: flex; align-items: center; gap: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem; font-family: 'Rajdhani', sans-serif; font-size: 1rem; }
+    .meta-tag { background: var(--neon-cyan); color: #000; padding: 2px 10px; font-weight: bold; border-radius: 2px; }
+    .meta-author { color: var(--neon-purple); font-weight: 700; }
+    
+    .article-image { width: 100%; border: 1px solid var(--border-color); border-radius: 4px; margin-bottom: 2rem; position: relative; }
+    .article-image img { width: 100%; display: block; border-radius: 3px; }
+    
+    .article-content p { margin-bottom: 1.5rem; font-size: 1.05rem; color: #d1d1d6; line-height: 1.8; }
+    .article-content h2 { font-size: 1.5rem; color: var(--neon-cyan); margin: 2rem 0 1rem; border-left: 4px solid var(--neon-cyan); padding-left: 15px; }
+    
+    .highlight-box { background: rgba(191, 0, 255, 0.05); border: 1px solid var(--neon-purple); padding: 1.5rem; border-radius: 4px; margin: 2rem 0; box-shadow: inset 0 0 20px rgba(191, 0, 255, 0.1); }
+    .highlight-box p { margin: 0; color: var(--text-main); font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 600; text-align: center; }
+    .highlight-box span { color: var(--neon-cyan); }
+
+    /* SIDEBAR (KANAN) */
+    .sidebar { background: var(--bg-panel); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 4px; height: fit-content; }
+    .section-header { display: flex; align-items: center; gap: 15px; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+    .section-header h2 { font-size: 1.3rem; color: var(--neon-cyan); letter-spacing: 1px; }
+    .section-header::after { content: ''; flex-grow: 1; height: 2px; background: linear-gradient(90deg, var(--neon-cyan), transparent); }
+    
+    .trending-list { list-style: none; counter-reset: trend-counter; }
+    .trending-item { position: relative; padding: 15px 0 15px 35px; border-bottom: 1px dashed var(--border-color); }
+    .trending-item:last-child { border-bottom: none; }
+    .trending-item::before {
+      counter-increment: trend-counter; content: counter(trend-counter);
+      position: absolute; left: 0; top: 15px; font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem; font-weight: 900; color: var(--neon-purple);
+    }
+    .trending-link { color: #fff; text-decoration: none; font-weight: 600; font-family: 'Rajdhani', sans-serif; font-size: 1.05rem; transition: 0.2s; }
+    .trending-link:hover { color: var(--neon-cyan); }
+    .trending-meta { display: block; font-size: 0.75rem; color: var(--text-muted); margin-top: 5px; }
+
+    /* REVIEW & FAQ (SYSTEM LOGS DI BAWAH ARTIKEL) */
+    .system-logs { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (max-width: 768px) { .system-logs { grid-template-columns: 1fr; } }
+    
+    .log-box { background: rgba(13, 13, 20, 0.8); border: 1px solid #333; border-left: 4px solid var(--neon-purple); padding: 1.5rem; }
+    .log-header { font-family: 'Orbitron', sans-serif; color: var(--neon-cyan); font-size: 1.1rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+    .log-header::before { content: '>'; color: var(--neon-purple); font-weight: bold; }
+    
+    .faq-q { color: #fff; font-weight: 600; font-size: 1rem; margin-bottom: 5px; }
+    .faq-a { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px; }
+    
+    .review-stars { color: #fcd34d; font-size: 1.2rem; margin-bottom: 5px; letter-spacing: 2px; }
+    .review-text { font-style: italic; color: #ccc; font-size: 0.95rem; }
+    .reviewer { color: var(--neon-purple); font-family: 'Orbitron', sans-serif; font-size: 0.85rem; margin-top: 10px; }
+
+    /* FOOTER (DENGAN LINK WDBOS) */
+    .footer { text-align: center; padding: 2rem; background: #020203; border-top: 1px solid var(--neon-purple); margin-top: 4rem; color: var(--text-muted); font-size: 0.9rem; }
+    .footer a { color: var(--neon-cyan); font-family: 'Orbitron', sans-serif; font-weight: bold; letter-spacing: 1px; text-decoration: none; transition: all 0.3s ease; }
+    .footer a:hover { color: var(--neon-purple); text-shadow: 0 0 10px var(--neon-purple); }
+  </style>
+
+  <!-- === SCHEMA MARKUP (GABUNGAN SEMUA: NewsArticle, Brand, WebSite, Review, FAQ, AggregateRating) === -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://wdbosya.github.io/WDBOS/#website",
+        "url": "https://wdbosya.github.io/WDBOS/",
+        "name": "WDBOS",
+        "description": "Portal Berita Gaming & Turnamen Esports Terkini"
+      },
+      {
+        "@type": "Brand",
+        "@id": "https://wdbosya.github.io/WDBOS/#brand",
+        "name": "WDBOS",
+        "logo": "https://wdbosya.github.io/WDBOS/favicon.png",
+        "image": "https://wdbosya.github.io/WDBOS/upss.jpg"
+      },
+      {
+        "@type": "NewsArticle",
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://wdbosya.github.io/WDBOS/" },
+        "headline": "WDBOS : Portal Gaming & Turnamen Esports Terkini",
+        "image": ["https://wdbosya.github.io/WDBOS/upss.jpg"],
+        "datePublished": "2026-09-22T08:00:00+07:00",
+        "author": { "@type": "Organization", "name": "WDBOS XDANAX" },
+        "publisher": { "@type": "Organization", "name": "WDBOS", "logo": { "@type": "ImageObject", "url": "https://wdbosya.github.io/WDBOS/favicon.png" } }
+      },
+      {
+        "@type": "AggregateRating",
+        "itemReviewed": { "@type": "Organization", "name": "WDBOS" },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "ratingCount": "89540"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Beranda", "item": "https://wdbosya.github.io/WDBOS/" },
+          { "@type": "ListItem", "position": 2, "name": "WDBOS", "item": "https://wdbosya.github.io/WDBOS/" }
+        ]
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "ProGamer_ID" },
+        "itemReviewed": { "@type": "Organization", "name": "WDBOS" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Portal berita gaming paling update. Turnamen di WDBOS selalu kompetitif dan beritanya sangat cepat!"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Apa itu WDBOS?",
+            "acceptedAnswer": { "@type": "Answer", "text": "WDBOS adalah portal berita gaming dan platform turnamen esports terbesar di Indonesia." }
+          },
+          {
+            "@type": "Question",
+            "name": "Bagaimana cara mendaftar turnamen?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Klik tombol DAFTAR, login ke akun Anda, lalu masuk ke menu Esports Arena untuk registrasi." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="https://wdbosya.github.io/WDBOS/" class="brand-group">
+      <img src="https://wdbosya.github.io/WDBOS/favicon.png" alt="WDBOS Logo">
+      <div>
+        <div class="brand-title">WDBOS <span class="brand-subtitle">NEWS</span></div>
+      </div>
+    </a>
+    
+    <div class="nav-links">
+      <a href="#">BERANDA</a>
+      <a href="#">ESPORTS</a>
+      <a href="#">REVIEW GAME</a>
+      <a href="#">TURNAMEN</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="https://wdbosya.github.io/WDBOS/amp.html" class="btn btn-login">LOGIN</a>
+      <a href="https://wdbosya.github.io/WDBOS/amp.html" class="btn btn-register">DAFTAR</a>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <a href="https://wdbosya.github.io/WDBOS/">Beranda</a> <span>/</span> 
+      <a href="#">Official Announcement</a> <span>/</span> 
+      WDBOS
+    </div>
+
+    <!-- MAIN CONTENT GRID -->
+    <div class="content-wrapper">
+      
+      <!-- KOLOM KIRI: FULL ARTIKEL UTAMA -->
+      <main>
+        <h1 class="gaming-font article-title">WDBOS : Portal Gaming & Turnamen Esports Terkini</h1>
+
+        <div class="article-meta">
+          <span class="meta-tag">OFFICIAL LAUNCH</span>
+          <span>Oleh <span class="meta-author">WDBOS XDANAX</span></span>
+          <span style="color: var(--text-muted);">22 September 2026</span>
+        </div>
+
+        <div class="article-image">
+          <img src="https://wdbosya.github.io/WDBOS/upss.jpg" alt="WDBOS Gaming Banner">
+        </div>
+
+        <article class="article-content">
+          <p>Dunia gaming dan esports bergerak dengan kecepatan kilat. META berubah dalam semalam, game baru bermunculan, dan turnamen kelas atas digelar setiap akhir pekan. Untuk memastikan Anda tidak pernah ketinggalan informasi krusial, kami dengan bangga menghadirkan <strong>WDBOS</strong>.</p>
+          
+          <div class="highlight-box">
+            <p>"Dapatkan berita terbaru seputar dunia gaming, update patch, review game, dan jadwal turnamen esports terbesar <span>hanya di portal berita WDBOS.</span>"</p>
+          </div>
+
+          <p>Melalui portal berita ini, WDBOS berkomitmen untuk menjadi sumber informasi utama bagi para <em>hardcore gamer</em> maupun penikmat <em>esports</em> di seluruh Indonesia. Berikut adalah sajian intelijen yang bisa Anda nikmati secara eksklusif:</p>
+
+          <h2 class="gaming-font">1. Update Patch & Analisa META</h2>
+          <p>Tim jurnalis gaming kami yang juga merupakan para *pro-player* aktif akan membedah setiap Update Patch dari game-game populer (seperti FPS, MOBA, dan Battle Royale). Kami menyajikan analisa mendalam mengenai <em>META (Most Effective Tactic Available)</em> agar strategi permainan Anda selalu selangkah lebih maju.</p>
+
+          <h2 class="gaming-font">2. Review Game Ter-Epic</h2>
+          <p>Bingung mau membeli game AAA terbaru? Review Game di WDBOS dilakukan secara jujur. Kami menilai berdasarkan kualitas grafis, mekanik *gameplay*, stabilisasi *server*, hingga sistem <em>microtransaction</em> (Pay-to-Win atau tidak). Temukan ulasan lengkapnya di sini.</p>
+
+          <h2 class="gaming-font">3. Jadwal Turnamen Esports Terbesar</h2>
+          <p>Sebagai platform esports terpercaya, WDBOS bukan hanya memberikan berita, tetapi juga memfasilitasi jalannya turnamen. Di portal ini, Anda bisa melihat jadwal turnamen esports terbesar—baik skala nasional maupun internasional. Anda bisa langsung mendaftarkan tim Anda dan memperebutkan hadiah senilai ratusan juta rupiah eksklusif dari WDBOS.</p>
+        </article>
+      </main>
+
+      <!-- KOLOM KANAN: SIDEBAR TRENDING -->
+      <aside class="sidebar">
+        <div class="section-header">
+          <h2>TOP TRENDING</h2>
+        </div>
+        <ul class="trending-list">
+          <li class="trending-item">
+            <a href="#" class="trending-link">Patch 2.4 Cyber Strike: Senjata Baru & Nerf Meta!</a>
+            <span class="trending-meta">8.4k Views • Update</span>
+          </li>
+          <li class="trending-item">
+            <a href="#" class="trending-link">Cara Mendaftar Turnamen Amatir WDBOS Bulan Ini</a>
+            <span class="trending-meta">7.1k Views • Esports</span>
+          </li>
+          <li class="trending-item">
+            <a href="#" class="trending-link">Bocoran Skin Langka di Event Halloween Mendatang</a>
+            <span class="trending-meta">6.2k Views • Leak & Rumor</span>
+          </li>
+          <li class="trending-item">
+            <a href="#" class="trending-link">Elden Quest Review: Masterpiece atau Sekadar Hype?</a>
+            <span class="trending-meta">5.1k Views • Review</span>
+          </li>
+          <li class="trending-item">
+            <a href="#" class="trending-link">Tips Membangun PC Gaming Budget Pelajar 2026</a>
+            <span class="trending-meta">4.9k Views • Hardware</span>
+          </li>
+        </ul>
+      </aside>
+
+    </div>
+
+    <!-- SEO COMPLIANCE SECTIONS (REVIEW & FAQ HTML DI BAWAH ARTIKEL) -->
+    <div class="system-logs">
+      <!-- Visual Review -->
+      <div class="log-box">
+        <div class="log-header">COMMUNITY FEEDBACK_</div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Portal berita gaming paling update. Turnamen di WDBOS selalu kompetitif, server no-lag, dan beritanya sangat cepat!"</p>
+        <div class="reviewer">USER_ID: ProGamer_ID</div>
+      </div>
+
+      <!-- Visual FAQ -->
+      <div class="log-box">
+        <div class="log-header">DATABASE F.A.Q_</div>
+        <div class="faq-q">Q: Apa itu WDBOS?</div>
+        <div class="faq-a">A: WDBOS adalah portal berita gaming dan platform turnamen esports terbesar di Indonesia.</div>
+        
+        <div class="faq-q">Q: Bagaimana cara mendaftar turnamen?</div>
+        <div class="faq-a">A: Klik tombol <strong>DAFTAR</strong> di atas, login ke akun Anda, lalu masuk ke menu Esports Arena.</div>
+      </div>
+    </div>
+
+  </div> <!-- End Container -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 SEO XDANAX <a href="https://wdbosya.github.io/WDBOS/">WDBOS</a></p>
+  </footer>
+
+</body>
+</html>
