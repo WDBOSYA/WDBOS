@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- === SEO & META TAGS (TEMA SPORT) === -->
+  <title>Arena Sport: Pusat Skor Langsung & Berita Olahraga Terkini</title>
+  <meta name="title" content="Arena Sport: Pusat Skor Langsung & Berita Olahraga Terkini">
+  <meta name="description" content="Dapatkan update skor langsung, statistik real-time, dan ulasan mendalam dari liga sepak bola, basket, hingga turnamen balap dunia.">
+  <meta name="keywords" content="berita olahraga, skor langsung, hasil pertandingan, liga inggris, NBA, jadwal bola, berita sport terkini">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Sport Editorial Team">
+  <meta name="geo.region" content="ID">
+  <meta name="geo.placename" content="Indonesia">
+
+  <!-- === CANONICAL & AMPHTML (URL Spesifik) === -->
+  <link rel="canonical" href="https://wdbosya.github.io/WDBOS/Arena-Sport-Berita-Terkini.html">
+  <link rel="amphtml" href="https://wdbosya.github.io/WDBOS/amp.html">
+  
+  <link rel="shortcut icon" href="https://wdbosya.github.io/WDBOS/favicon.png" type="image/x-icon">
+  <link rel="icon" type="image/png" href="https://wdbosya.github.io/WDBOS/favicon.png">
+  <link rel="apple-touch-icon" href="https://wdbosya.github.io/WDBOS/favicon.png">
+
+  <!-- === OPEN GRAPH & TWITTER === -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wdbosya.github.io/WDBOS/Arena-Sport-Berita-Terkini.html">
+  <meta property="og:site_name" content="Arena Sport">
+  <meta property="og:title" content="Arena Sport: Pusat Skor Langsung & Berita Olahraga">
+  <meta property="og:description" content="Pantau hasil pertandingan sepak bola, basket, dan olahraga favoritmu secara real-time.">
+  <!-- Gambar representasi olahraga (bola) -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=1000&q=80">
+  <meta property="og:locale" content="id_ID">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arena Sport: Pusat Skor Langsung & Berita Olahraga">
+  <meta name="twitter:description" content="Update skor langsung dan berita olahraga terbaru hari ini.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=1000&q=80">
+
+  <!-- Google Fonts: Roboto (Standar Play Store) & Orbitron -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Palet Warna Play Store Dark Mode */
+      --bg-main: #202124;
+      --bg-surface: #303134;
+      --text-main: #E8EAED;
+      --text-muted: #9AA0A6;
+      --play-green: #01875F;
+      --play-green-light: #5BB974;
+      --play-blue: #8AB4F8;
+      --border-color: #3C4043;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body { 
+      font-family: 'Roboto', system-ui, -apple-system, sans-serif; 
+      background-color: var(--bg-main); 
+      color: var(--text-main); 
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+
+    a { text-decoration: none; }
+
+    /* HEADER / APP BAR */
+    .header {
+      background-color: var(--bg-main);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    
+    .brand-group { display: flex; align-items: center; gap: 12px; }
+    .brand-group img { width: 32px; height: 32px; border-radius: 6px; }
+    .brand-title { font-size: 1.3rem; font-weight: 500; color: var(--text-main); letter-spacing: 0.5px; font-family: 'Orbitron', sans-serif; }
+    
+    .header-actions { display: flex; gap: 16px; align-items: center; }
+    .btn-nav { color: var(--play-blue); font-weight: 500; font-size: 0.95rem; }
+    .profile-icon { 
+      width: 32px; height: 32px; border-radius: 50%; background: var(--play-green); 
+      color: #fff; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 1rem;
+    }
+
+    /* CONTAINER UTAMA */
+    .container { max-width: 860px; margin: 0 auto; padding: 24px 16px; }
+
+    /* APP HEADER SECTION (Hero Area) */
+    .app-header { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 24px; }
+    .app-icon { width: 100px; height: 100px; border-radius: 20%; box-shadow: 0 2px 8px rgba(0,0,0,0.3); object-fit: cover; }
+    .app-title-area { flex: 1; }
+    .app-title-area h1 { font-size: 1.5rem; font-weight: 500; margin-bottom: 4px; line-height: 1.3; }
+    .app-company { color: var(--play-green-light); font-weight: 500; font-size: 0.95rem; margin-bottom: 4px; }
+    .app-category { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 12px; }
+    
+    /* INFO METRICS (Rating, Download, dll) */
+    .app-metrics { display: flex; gap: 32px; margin-bottom: 24px; align-items: center; flex-wrap: wrap; }
+    .metric { display: flex; flex-direction: column; align-items: center; position: relative; }
+    .metric::after { content: ''; position: absolute; right: -16px; top: 10%; height: 80%; width: 1px; background-color: var(--border-color); }
+    .metric:last-child::after { display: none; }
+    .metric strong { font-size: 1.1rem; display: flex; align-items: center; gap: 4px; }
+    .metric span { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+    .star-icon { font-size: 0.9rem; }
+
+    /* TOMBOL INSTALL (Mengarah ke Biolinku) */
+    .btn-install {
+      display: block; width: 100%; max-width: 400px; background-color: var(--play-green);
+      color: #000; text-align: center; padding: 10px 0; border-radius: 24px;
+      font-weight: 500; font-size: 0.95rem; letter-spacing: 0.5px; transition: 0.2s;
+    }
+    .btn-install:hover { background-color: var(--play-green-light); transform: scale(1.02); }
+
+    /* SCREENSHOTS (Horizontal Scroll) */
+    .screenshots-container { display: flex; overflow-x: auto; gap: 12px; padding-bottom: 16px; margin: 32px 0; scroll-snap-type: x mandatory; }
+    .screenshots-container::-webkit-scrollbar { height: 6px; }
+    .screenshots-container::-webkit-scrollbar-track { background: var(--bg-main); }
+    .screenshots-container::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+    .screenshot { width: 280px; height: 157px; border-radius: 8px; object-fit: cover; flex-shrink: 0; scroll-snap-align: start; border: 1px solid var(--border-color); }
+
+    /* ARTIKEL BERITA ("Tentang aplikasi ini") */
+    .section-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .section-title h2 { font-size: 1.1rem; font-weight: 500; }
+    .section-title a { color: var(--play-blue); font-weight: 500; font-size: 1.2rem; }
+
+    .article-content { color: var(--text-main); font-size: 0.9rem; line-height: 1.6; }
+    .article-content p { margin-bottom: 16px; }
+    .article-content h3 { font-size: 1.05rem; color: var(--play-green-light); margin: 24px 0 8px; font-weight: 500; }
+    
+    .tags-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; border-bottom: 1px solid var(--border-color); padding-bottom: 24px; }
+    .tag { border: 1px solid var(--border-color); color: var(--text-muted); padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: 500; }
+
+    /* REVIEWS SECTION */
+    .rating-section { margin-top: 24px; }
+    .rating-header { display: flex; align-items: center; gap: 24px; margin-bottom: 24px; }
+    .rating-score { font-size: 4rem; font-weight: 400; line-height: 1; }
+    .rating-stars { display: flex; flex-direction: column; }
+    .stars { color: var(--play-green-light); font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 4px; }
+    
+    .review-card { display: flex; gap: 16px; margin-bottom: 24px; }
+    .reviewer-img { width: 40px; height: 40px; border-radius: 50%; background: #E65100; display: flex; justify-content: center; align-items: center; font-size: 1rem; font-weight: bold; flex-shrink: 0; }
+    .review-content h4 { margin: 0 0 4px 0; font-size: 0.95rem; font-weight: 500; }
+    .review-meta { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .review-text { font-size: 0.9rem; line-height: 1.5; color: var(--text-main); margin: 0; }
+
+    /* FOOTER */
+    .footer { text-align: center; padding: 32px 16px; border-top: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-muted); margin-top: 24px; }
+    .footer a { color: var(--play-blue); font-weight: 500; text-decoration: none; font-family: 'Orbitron', sans-serif; letter-spacing: 1px; }
+  </style>
+
+  <!-- === SCHEMA MARKUP === -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://wdbosya.github.io/WDBOS/#website",
+        "url": "https://wdbosya.github.io/WDBOS/",
+        "name": "Arena Sport",
+        "description": "Pusat Skor Langsung & Berita Olahraga Terkini"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Arena Sport - Skor & Berita",
+        "applicationCategory": "SportsApplication",
+        "operatingSystem": "All",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "ratingCount": "120540"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Beranda",
+            "item": "https://wdbosya.github.io/WDBOS/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Berita Olahraga",
+            "item": "https://wdbosya.github.io/WDBOS/Arena-Sport-Berita-Terkini.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- APP BAR / HEADER -->
+  <header class="header">
+    <a href="https://wdbosya.github.io/WDBOS/" class="brand-group">
+      <!-- Icon Bola untuk Brand -->
+      <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=100&q=80" alt="Sport Logo">
+      <span class="brand-title">Arena Sport</span>
+    </a>
+    
+    <div class="header-actions">
+      <!-- Tombol mengarah ke Biolinku -->
+      <a href="https://biolinku.co/WDBOS" class="btn-nav">Masuk</a>
+      <a href="https://biolinku.co/WDBOS" class="profile-icon">A</a>
+    </div>
+  </header>
+
+  <div class="container">
+    
+    <!-- APP INFO HEADER (Mirip Detail Aplikasi Play Store) -->
+    <div class="app-header">
+      <!-- Icon Utama Aplikasi -->
+      <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=200&q=80" alt="Sport App Icon" class="app-icon">
+      
+      <div class="app-title-area">
+        <h1>Arena Sport: Skor Langsung & Berita Olahraga</h1>
+        <div class="app-company">Sport Editorial Team</div>
+        <div class="app-category">Olahraga • Berita • Live Score</div>
+        
+        <!-- Informasi Metrik -->
+        <div class="app-metrics">
+          <div class="metric">
+            <strong>4,8 <span class="star-icon">★</span></strong>
+            <span>120 rb ulasan</span>
+          </div>
+          <div class="metric">
+            <strong>5 Jt+</strong>
+            <span>Pembaca Aktif</span>
+          </div>
+          <div class="metric">
+            <strong><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/PEGI_3.svg/150px-PEGI_3.svg.png" width="16" alt="PEGI 3" style="filter: grayscale(1) invert(1) brightness(2);"></strong>
+            <span>Rating 3+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOMBOL AKSI UTAMA MENGARAH KE BIOLINKU -->
+    <a href="https://biolinku.co/WDBOS" class="btn-install">Daftar & Pantau Skor</a>
+
+    <!-- GAMBAR SCREENSHOTS HORIZONTAL (Kategori Olahraga) -->
+    <div class="screenshots-container">
+      <img src="https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=500&q=80" alt="Sepak Bola" class="screenshot">
+      <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=500&q=80" alt="Bola Basket" class="screenshot">
+      <img src="https://images.unsplash.com/photo-1532906803859-994df7be0ec4?auto=format&fit=crop&w=500&q=80" alt="Balap Motor" class="screenshot">
+      <img src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=500&q=80" alt="Tenis Lapangan" class="screenshot">
+    </div>
+
+    <!-- KONTEN PORTAL ("Tentang portal ini") -->
+    <div class="section-title">
+      <h2>Tentang portal ini</h2>
+      <a href="#">&rarr;</a>
+    </div>
+
+    <article class="article-content">
+      <p>Jangan sampai tertinggal momen krusial dari tim kesayangan Anda! <strong>Arena Sport</strong> adalah pusat informasi olahraga paling komprehensif yang menyajikan berita terkini, hasil pertandingan, dan analisis taktik dari seluruh dunia.</p>
+      
+      <p>Baik Anda penggemar fanatik Liga Inggris, penikmat slam dunk di NBA, atau pengagum kecepatan di lintasan MotoGP, kami mengemas seluruh informasinya langsung ke genggaman Anda secara *real-time*.</p>
+
+      <h3>Skor Langsung & Statistik Nyata</h3>
+      <p>Tidak bisa menonton pertandingan secara langsung? Jangan khawatir. Fitur <em>Live Score</em> kami memperbarui setiap gol, kartu merah, dan pergantian pemain dalam hitungan detik. Dilengkapi dengan statistik penguasaan bola dan tembakan ke gawang yang sangat detail untuk memuaskan jiwa analis Anda.</p>
+
+      <h3>Analisis Pakar & Prediksi Jitu</h3>
+      <p>Baca ulasan mendalam sebelum (Pre-Match) dan sesudah pertandingan (Post-Match) yang ditulis langsung oleh jurnalis olahraga berpengalaman. Kami membedah formasi, cedera pemain kunci, hingga rekor <em>head-to-head</em> untuk memberi Anda perspektif pertandingan yang lebih luas.</p>
+
+      <h3>Semua Cabang Olahraga dalam Satu Tempat</h3>
+      <p>Kami tidak hanya membahas sepak bola. Akses berita eksklusif dari dunia Bola Basket, Tenis Grand Slam, Formula 1, MotoGP, hingga olahraga tarung seperti UFC dan Tinju Internasional. Notifikasi instan memastikan Anda selalu menjadi yang pertama tahu saat berita <em>Breaking News</em> terjadi.</p>
+
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 24px;"><em>Pembaruan Sistem: 23 September 2026</em></p>
+    </article>
+
+    <div class="tags-container">
+      <span class="tag">#SepakBola</span>
+      <span class="tag">#NBA</span>
+      <span class="tag">#LiveScore</span>
+      <span class="tag">#BeritaOlahraga</span>
+      <span class="tag">#MotoGP</span>
+    </div>
+
+    <!-- RATING & REVIEWS -->
+    <section class="rating-section">
+      <div class="section-title">
+        <h2>Rating dan ulasan</h2>
+        <a href="#">&rarr;</a>
+      </div>
+      
+      <div class="rating-header">
+        <div class="rating-score">4,8</div>
+        <div class="rating-stars">
+          <div class="stars">★★★★★</div>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">120.540 ulasan</span>
+        </div>
+      </div>
+
+      <!-- Review Item 1 -->
+      <div class="review-card">
+        <div class="reviewer-img">R</div>
+        <div class="review-content">
+          <h4>Ronaldo_Fans99</h4>
+          <div class="review-meta">
+            <span style="color: var(--play-green-light); font-size: 0.85rem;">★★★★★</span> • 23 Sep 2026
+          </div>
+          <p class="review-text">Update skornya bener-bener cepet banget, bahkan lebih cepet dari notif di TV. Artikel ulasannya juga tajam dan nggak cuma clickbait. Sangat recommended buat pecinta bola!</p>
+        </div>
+      </div>
+
+      <!-- Review Item 2 -->
+      <div class="review-card">
+        <div class="reviewer-img" style="background: #3F51B5;">B</div>
+        <div class="review-content">
+          <h4>BasketManiac</h4>
+          <div class="review-meta">
+            <span style="color: var(--play-green-light); font-size: 0.85rem;">★★★★★</span> • 21 Sep 2026
+          </div>
+          <p class="review-text">Suka banget sama statistik pertandingannya. Tampilan UI-nya bersih dan mode gelapnya bikin nyaman kalau baca berita NBA pagi-pagi.</p>
+        </div>
+      </div>
+    </section>
+
+  </div> <!-- End Container -->
+
+  <!-- FOOTER: PENEMPATAN BRAND WDBOS -->
+  <footer class="footer">
+    <p>Tata letak terinspirasi dari UI Aplikasi Digital. Konten dikelola secara profesional.</p>
+    <p>&copy; 2026 <a href="https://wdbosya.github.io/WDBOS/">WDBOS</a>. Hak cipta dilindungi undang-undang.</p>
+  </footer>
+
+</body>
+</html>
